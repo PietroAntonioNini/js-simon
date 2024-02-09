@@ -25,9 +25,19 @@ setInterval(countDown, 1000);
 function countDown() {
     //data e ora attuali con un timestamp
     let nowDate = new Date().getTime();
-    console.log(nowDate);
 
     //distanza tra adesso e la data di scadenza
     let distance = countDownDate - nowDate;
-    console.log(distance);
+
+    //calcolo i giorni, ore, minuti e secondi rimanenti alla scadenza
+    //calcolo la distanza dei giorni (60 secondi per 60 minuti per 24 ore)
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    //come sopra ma sottraggo i "days"
+    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    console.log(hours);
+
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    console.log(minutes);
+
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 }
