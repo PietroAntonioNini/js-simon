@@ -34,10 +34,20 @@ function countDown() {
     let days = Math.floor(distance / (1000 * 60 * 60 * 24));
     //come sopra ma sottraggo i "days"
     let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    console.log(hours);
 
     let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    console.log(minutes);
 
     let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    //stampo il risultato
+    timerElement.innerText = days + "g " + hours + "h "+ minutes + "m " + seconds + "s ";
+
+    //quando il countdown è terminato, stampo un messaggio
+    if(distance < 0) {
+        clearInterval(x);
+        timerElement.innerHTML = "E' tempo di correggere l'esercizio!";
+    }
 }
+
+
+   
