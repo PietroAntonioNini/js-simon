@@ -40,8 +40,18 @@
 .box-time h1 {
     padding: 10px 8px;
 
-    border: 1px solid red;
-    border-radius: 50px;
+    border-radius: 20px;
+
+    backdrop-filter: blur(8px);
+    background-clip: padding-box;
+}
+
+.box-time .timing {
+    padding: 10px 20px;
+
+    font-size: 40px;
+
+    border-radius: 20px;
 
     backdrop-filter: blur(8px);
     background-clip: padding-box;
