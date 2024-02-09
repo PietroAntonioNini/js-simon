@@ -5,3 +5,44 @@
 }
 /* reset */
 
+.container {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: sans-serif;
+
+    background-image: url(../img/Stelle\ wallpaper\ 4k.jpg);
+    background-size: cover;
+}
+
+.box-time {
+    width: 40%;
+    height: 40%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    border-radius: 20px;
+
+    background-image: url(../img/Immagini\ Bigbang\ 4k.jpg);
+    background-size: cover;
+    background-position: 0%;
+
+    color: black;
+}
+
+.box-time h1 {
+    padding: 10px 8px;
+
+    border: 1px solid red;
+    border-radius: 50px;
+
+    backdrop-filter: blur(8px);
+    background-clip: padding-box;
+}
